@@ -1,0 +1,51 @@
+{
+  "name": "koa-nextjs-react-typescript-boilerplate",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "NODE_ENV=production node dist/index.js",
+    "lint": "eslint '**/*.{ts,tsx}'",
+    "prettier": "prettier --write \"**/*.{js,ts,tsx,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": []
+  },
+  "dependencies": {
+    "humps": "^2.0.1",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-morgan": "^1.0.1",
+    "koa-mount": "^4.0.0",
+    "koa-proxies": "^0.11.0",
+    "koa-router": "^8.0.8",
+    "next": "^9.3.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/humps": "^1.1.3",
+    "@types/koa": "^2.11.2",
+    "@types/koa-morgan": "^1.0.4",
+    "@types/koa-mount": "^4.0.0",
+    "@types/koa-proxies": "^0.9.0",
+    "@types/koa-router": "^7.4.0",
+    "@types/node": "^13.9.0",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "16.9.5",
+    "@types/styled-components": "^5.0.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  }
+}
